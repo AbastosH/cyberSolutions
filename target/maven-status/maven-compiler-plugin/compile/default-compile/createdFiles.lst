@@ -1,0 +1,5 @@
+base\BaseTest.class
+pages\Register_Page.class
+pages\DatePicker_Page.class
+pages\Frames_Page.class
+pages\Slider_Page.class
