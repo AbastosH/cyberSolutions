@@ -39,6 +39,7 @@ Copy code
   </dependencies>
 
 Baixe o ChromeDriver compatível com a versão do seu navegador e coloque-o no diretório do projeto.
+
 Uso:
 
 O projeto faz parte de um desafio para a função de Automação de QA e não tem um uso específico além de demonstrar cenários de testes automatizados.
