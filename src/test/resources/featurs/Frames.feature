@@ -1,5 +1,5 @@
 #language: pt
-Funcionalidade: Automação de input dentro de frame
+Funcionalidade: Automacao de input dentro de frame
 
   Esquema do Cenario: Esrever dentro da frame
 

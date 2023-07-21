@@ -1,5 +1,5 @@
 #language: pt
-Funcionalidade: Automação de input dentro de frame
+Funcionalidade: Automacao de escolha de Data no Datapicker
 
  Esquema do Cenario: Escolher Datapicker1
 

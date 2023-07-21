@@ -1,7 +1,7 @@
 #language: pt
-Funcionalidade: Barra Slider
+Funcionalidade: Automacao da manipulacao da Barra Slider
 
-  Esquema do Cenario: Arrastar a barra slider até 50%
+  Esquema do Cenario: Arrastar a barra slider ate porcentos definidos
 
     Dado que estou na aba de Slider
     Quando movo o slider para <porcento>%
