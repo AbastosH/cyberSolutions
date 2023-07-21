@@ -3,11 +3,15 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-
+import org.openqa.selenium.support.ui.WebDriverWait;
+import java.time.Duration;
 import java.util.List;
+
 
 public class Register_Page {
     WebDriver driver;
@@ -19,7 +23,6 @@ public class Register_Page {
     @FindBy(xpath = "//input[@ng-model='Phone']") WebElement phoneField;
 
     @FindBy(xpath = "//div[@id='msdd']") WebElement languagesField;
-    @FindBy(xpath = "//span[@id='select2-country-container']") WebElement selectCountry;
 
     @FindBy(xpath = "//select[@placeholder='Year']") WebElement dobYearField;
     @FindBy(xpath = "//select[@placeholder='Month']") WebElement dobMonthField;
@@ -72,7 +75,9 @@ public class Register_Page {
     }
 
     public  void selectLanguage(List<String> languages){
-        languagesField.click();
+        Actions actions = new Actions(driver);
+        actions.moveToElement(languagesField).click().perform();
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         //iterar sobre os idiomas desejados
         for (String language : languages) {
         WebElement languageOption = driver.findElement(By.xpath("//li[a/text()='" + language + "']"));
@@ -87,10 +92,17 @@ public class Register_Page {
     }
 
     public void selectCountry(String country) {
-        selectCountry.click();
+
+       WebElement dropdown = driver.findElement(By.cssSelector(".select2-selection__arrow"));
+       dropdown.click();
+
+
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10)); // Espere até 10 segundos
         String countryXpath = "//ul[@id='select2-country-results']/li[text()='" + country +"']";
-        Select countryDropdown = new Select(driver.findElement(By.id(countryXpath)));
-        countryDropdown.selectByVisibleText(country);
+        WebElement countryElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(countryXpath)));
+
+
+        countryElement.click();
     }
 
     public void selectCountry1(String country) {

@@ -29,7 +29,7 @@ public class Slider_Page {
         double position = getSliderPosition();
 
         try {
-            Assert.assertEquals(percent, position, 1.0); //Margem de rro de 1%
+            Assert.assertEquals(percent, position, 1.0); //Margem de erro de 1%
             System.out.println("O Slider hanlde esta na posicao esperada. O teste passou ");
         } catch (AssertionError e) {
             System.out.println("Teste falhou ! Slider nao esta na posicao esperada");

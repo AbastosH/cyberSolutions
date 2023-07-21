@@ -31,16 +31,16 @@ public class Frames_Page {
                 return;
             }
 
-            // O campo de entrada não está neste iframe, então mudamos de volta para o contexto da página principal
+            // O campo de entrada não está neste iframe, volta para o contexto da página principal
             driver.switchTo().defaultContent();
         }
 
-        // Se chegarmos aqui, significa que não encontramos o campo de entrada em nenhum iframe
+        // Não encontramos o campo de entrada em nenhum iframe
         throw new RuntimeException("Não foi possível encontrar o campo de entrada em nenhum iframe");
     }
 
     public void enterMessage(String message){
-        // Como estamos no iframe correto, podemos supor que o primeiro campo de entrada é o que queremos
+        // iframe correto, o primeiro campo de entrada é o que queremos
         WebElement inputField = driver.findElement(By.xpath("//input[@type='text']"));
 
         inputField.click();

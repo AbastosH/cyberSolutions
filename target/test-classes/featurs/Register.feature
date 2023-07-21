@@ -22,5 +22,5 @@ Funcionalidade: Automacao do Formulario de Registro
     Entao a aplicacao envia o formulario por falta de campos preenchidos
 
     Exemplos:
-      | primeiro_nome | ultimo_nome | endereco   | email              | telefone     | genero | hobbies    | linguas    | habilidades | pais1 |pais    | data_nascimento | senha | confirma_senha |
-      | Nome1         | Sobrenome1  | Endereco1  | email1@example.com | 1234567890   | Male   | Cricket    | Arabic     | Java        |  Denmark |Denmark  | 1990-01-01      | pass1 | pass1          |
+      | primeiro_nome | ultimo_nome | endereco   | email              | telefone     | genero | hobbies |linguas| habilidades | pais1 |pais    | data_nascimento | senha | confirma_senha |
+      | Nome1         | Sobrenome1  | Endereco1  | email1@example.com | 1234567890   | Male   | Cricket |Arabic| Java        |  Denmark |Japan  | 1990-January-11      | pass1 | pass1          |
